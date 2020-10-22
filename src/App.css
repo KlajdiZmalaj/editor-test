@@ -1,38 +1,156 @@
+img {
+  width: 100%;
+  margin: 5px;
+}
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.editor {
+  width: 90%;
   display: flex;
-  flex-direction: column;
+  position: relative;
+  flex-flow: column;
+  padding: 12px;
+  flex-shrink: 0;
+}
+.editor > div {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+.editor .tools {
+  height: auto;
+  display: flex;
+  padding-bottom: 2px;
+}
+.editor .options {
+  height: auto;
+  display: flex;
+  padding-bottom: 2px;
+}
+.editor .options > div {
+  height: auto;
+  display: flex;
+  padding-bottom: 2px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.editor .tools span {
+  padding: 10px;
+  background-color: tomato;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2px;
+}
+.tui-image-editor-header {
+  display: none;
+}
+body .tui-image-editor-main-container {
+  background-color: #ffe7e6 !important;
+}
+.tui-image-editor-container .tui-image-editor-controls {
+  background-color: #ffc7c5;
 }
 
-.App-link {
-  color: #61dafb;
+html .tui-image-editor-menu use.normal.use-default {
+  fill: #222;
+  stroke: #222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html .tui-image-editor-menu use.hover.use-default {
+  fill-rule: evenodd;
+  fill: #000000;
+  stroke: #000000;
+}
+.tui-image-editor-container .tui-image-editor-main {
+  top: 0 !important;
+}
+
+body .tui-image-editor-submenu-style {
+  background-color: #ffdcdb !important;
+}
+body
+  .tui-image-editor-container.left
+  .tui-image-editor-submenu
+  .tui-image-editor-partition
+  > div,
+body
+  .tui-image-editor-container.right
+  .tui-image-editor-submenu
+  .tui-image-editor-partition
+  > div {
+  color: #000000;
+  border-bottom: 1px solid #ff87b0;
+}
+
+body .tui-image-editor-container .tui-image-editor-range-wrap label,
+body
+  .tui-image-editor-container
+  .tui-image-editor-submenu
+  .tui-image-editor-button
+  .color-picker-value
+  + label,
+.tie-icon-add-button.icon-bubble
+  .tui-image-editor-button[data-icontype="icon-bubble"]
+  label,
+.tie-icon-add-button.icon-heart
+  .tui-image-editor-button[data-icontype="icon-heart"]
+  label,
+.tie-icon-add-button.icon-location
+  .tui-image-editor-button[data-icontype="icon-location"]
+  label,
+.tie-icon-add-button.icon-polygon
+  .tui-image-editor-button[data-icontype="icon-polygon"]
+  label,
+.tie-icon-add-button.icon-star
+  .tui-image-editor-button[data-icontype="icon-star"]
+  label,
+.tie-icon-add-button.icon-star-2
+  .tui-image-editor-button[data-icontype="icon-star-2"]
+  label,
+.tie-icon-add-button.icon-arrow-3
+  .tui-image-editor-button[data-icontype="icon-arrow-3"]
+  label,
+.tie-icon-add-button.icon-arrow-2
+  .tui-image-editor-button[data-icontype="icon-arrow-2"]
+  label,
+.tie-icon-add-button.icon-arrow
+  .tui-image-editor-button[data-icontype="icon-arrow"]
+  label,
+.tie-icon-add-button.icon-bubble
+  .tui-image-editor-button[data-icontype="icon-bubble"]
+  label,
+.tie-draw-line-select-button.line .tui-image-editor-button.line label,
+.tie-draw-line-select-button.free .tui-image-editor-button.free label,
+.tie-flip-button.flipX .tui-image-editor-button.flipX label,
+.tie-flip-button.flipY .tui-image-editor-button.flipY label,
+.tie-flip-button.resetFlip .tui-image-editor-button.resetFlip label,
+.tie-crop-button .tui-image-editor-button.apply.active label,
+.tie-crop-preset-button .tui-image-editor-button.preset.active label,
+.tie-shape-button.rect .tui-image-editor-button.rect label,
+.tie-shape-button.circle .tui-image-editor-button.circle label,
+.tie-shape-button.triangle .tui-image-editor-button.triangle label,
+.tie-text-effect-button .tui-image-editor-button.active label,
+.tie-text-align-button.left .tui-image-editor-button.left label,
+.tie-text-align-button.center .tui-image-editor-button.center label,
+.tie-text-align-button.right .tui-image-editor-button.right label,
+.tie-mask-apply.apply.active .tui-image-editor-button.apply label,
+.tui-image-editor-container
+  .tui-image-editor-submenu
+  .tui-image-editor-button:hover
+  > label,
+.tui-image-editor-container .tui-image-editor-checkbox label > span {
+  color: #222 !important;
+}
+
+.tui-image-editor-submenu use.active.use-default {
+  fill: #ff87b0 !important;
+  stroke: #ff87b0 !important;
 }
